@@ -1,0 +1,68 @@
+HOW TO CREATE COMPONENT:
+============================
+Step 1: Create component file
+===============================
+Go to PROJECT(TESTING)-> src -> components 
+ right click on components and click on new file. name you file. (
+ In my case i want to create a component in which i want to show
+ search box with filter button.) So i am gonna name it "searchbox.vue"
+
+Note: every component will store under component folder. and each file will have extension ".vue"
+
+Step 2: Write component code
+==============================
+Every component must have two tags. 
+  1) template (will have html and scripting logic)
+  2) script   (will register component and all its variables etc)
+
+e.g:
+testing\src\components\searchbox.vue
+==========================================
+<template>
+    <div>
+        <p><input type="text" value="" /> <input type="submit" value="Filter" /></p>
+    </div>    
+</template>
+<script>
+
+export default{
+    name:'searchboxcomponent',
+    
+};
+</script>
+
+Step 3: Include component to page
+=========================================
+Go to PROJECT (testing) -> src -> App.vue
+
+and include new component like this 
+
+  i) import searchbox from './components/searchbox.vue'
+
+Now have to register this component. like this
+  
+  ii) export default {
+  components: { searchbox },
+  name: 'App'
+}
+
+You may use this component now like this
+
+  iii) <searchbox />
+
+Complete code is here
+
+testing\src\App.vue
+===========================
+<template>
+  <div id="app">
+    <searchbox />
+  </div>
+</template>
+<script>
+import searchbox from './components/searchbox.vue'
+export default {
+  components: { searchbox },
+  name: 'App'
+}
+</script>
