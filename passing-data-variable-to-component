@@ -1,0 +1,52 @@
+PASSING DATA/VARIABLE TO COMPONENT
+=======================================
+
+ 1) Go to App.vue file and add variable like this
+
+testing\src\App.vue
+====================
+<template>
+  <div id="app">
+    <searchbox defaultvalue="Find" />
+  </div>
+</template>
+
+<script>
+import searchbox from './components/searchbox.vue'
+export default {
+  components: { searchbox },
+  name: 'App'
+}
+</script>
+
+  2) Go to component file and register this variable under "props" like this.
+
+export default{
+    name:'searchboxcomponent',
+    props:{
+            defaultvalue:String        //(VARIABLE_NAME: DATA_TYPE)
+        }
+};
+
+   3) Use this variable inside curly braces like this
+<p>{{defaultvalue}}</p>
+
+Complete code of component is here
+
+testing\src\components\searchbox.vue
+==========================================
+<template>
+    <div>
+        <p>{{defaultvalue}}</p>
+        <p><input type="text" value="" /> <input type="submit" value="Filter" /></p>
+    </div>    
+</template>
+<script>
+
+export default{
+    name:'searchboxcomponent',
+    props:{
+            defaultvalue:String
+        }
+};
+</script>
