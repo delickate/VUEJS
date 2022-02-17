@@ -1,0 +1,30 @@
+INSTALL:
+=============
+C:\wamp64\www\vuejs>npm install --global vue-cli
+
+OR
+
+C:\wamp64\www\vuejs>npm i -g @vue/cli-init
+
+CREATE PROJECT:
+===================
+C:\wamp64\www\vuejs>vue init webpack testing
+
+Go to created project
+C:\wamp64\www\vuejs>cd testing
+
+Here you'll have vuejs project installed.
+
+RUN VUJS SERVER:
+===================
+C:\wamp64\www\vuejs\testing>npm run dev
+
+Here you'll get the url of your project
+
+like http://localhost:8080
+
+TO CHECK VUEJS VERSION
+==========================
+C:\wamp64\www\vuejs\testing>vue --version
+
+=================================================
